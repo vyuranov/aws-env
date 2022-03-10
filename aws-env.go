@@ -80,7 +80,7 @@ func OutputParameter(path string, parameter *ssm.Parameter, format string) {
 
 	switch format {
 	case formatExports:
-		fmt.Printf("export %s=$'%s'\n", env, value)
+		fmt.Printf("export %s='%s'\n", env, value)
 	case formatDotenv:
 		fmt.Printf("%s=\"%s\"\n", env, value)
 	}
